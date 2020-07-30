@@ -9,13 +9,13 @@
   <label>Choose an existing owner:</label>
   
   <%Owner.all.each do |owner|%>
- <input type="radio" name="pet[owner_id]" value="<%=owner.id%>" id="<%=owner.name%>" <%='checked' if @pet.owner.name == owner.name %>><%=owner.name%></input>
+ <input type="radio" name="pet[owner_id]" value="<%=owner.id%>" id="<%=owner.id%>" <%='checked' if @pet.owner.name == owner.name %>><%=owner.name%></input>
   <%end%>
 
   <label>and/or, create a new owner:</label>
 
   <label>name:</label>
-    <input  type="text" name="owner[name]" id="owner_name"></input>
+    <input type="text" name="owner[name]" id="owner_name"></input>
 
   <input type="submit" value="Update Pet">
 </form>
